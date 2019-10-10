@@ -1,0 +1,28 @@
+spring:
+  profiles: local, default
+  jackson:
+    serialization.INDENT_OUTPUT: true
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+  # Database Settings
+  datasource:
+    url: jdbc:h2:mem:flyway-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    initialization-mode: always
+    username: root
+    password: root
+    driverClassName: org.h2.Driver
+    defaultSchema:
+      maxPoolSize: 10
+    # Hibernate Settings
+    jpa:
+      #database-platform: org.hibernate.dialect.H2Dialect
+      show_sql: true
+      generate-ddl: true
+      hibernate:
+        ddl-auto: validate
