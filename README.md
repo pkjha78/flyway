@@ -15,8 +15,8 @@ Server Error 5xx: indicates the server has encountered an error during the proce
 
 Following status code has been used in this example:
 
-| ID		| Status Code	|	Description																							|
-| ---: 	| ---:	| ---: |
+| HTTP Code		| Status 	|	Description																							|
+| ---: 	| :---	| :--- |
 | 200	|	Success	|	The request has succeeded |
 | 201	|	Created	|	The request has been fulfilled and resulted in a new resource being created |
 | 204	| No Content |	The request has fulfilled the request but does not need to return an entity body |
